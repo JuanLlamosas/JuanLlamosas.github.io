@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link a archivos CCS de Bootstrap y propio --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>JPLlamosas - Portafolio</title>
+</head>
+<body>
+    
+    <header>
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="../index.html"><div><img src="../img/home.png" class="fotosRedes" alt="Home"></div></a></li>
+              <li class="nav-item"><a class="nav-link" href="../sobre_mi/desarrollador.html">Sobre mí</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Portafolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="../eventos/eventos.html">Eventos</a></li> 
+              <li class="nav-item"><a class="nav-link" href="../galeria/galeria.html">Galería de fotos</a></li> 
+              <li class="nav-item"><a class="nav-link" href="../juego/juego.html">Juego</a></li> 
+              <li class="nav-item"><a class="nav-link" href="../contacto/contacto.html">Contacto</a></li>                  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Prácticas artísticas
+                </a>
+                <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../practicas_artisticas/practica1/2n2.html">"2n²"</a></li>
+                      <li><a class="dropdown-item" href="../practicas_artisticas/practica2/mente.html">"Mente"</a></li>
+                      <li><a class="dropdown-item" href="../practicas_artisticas/practica3/solitario.html">"Solitario"</a></li>
+                      <li><a class="dropdown-item" href="../practicas_artisticas/practica4/yopixel.html">"Yo pixel"</a></li>
+                      <li><a class="dropdown-item" href="../practicas_artisticas/practica5/reflejo_digital.html">"Reflejo digital"</a></li>
+                      <li><a class="dropdown-item" href="../practicas_artisticas/practica6/vjing.html">VJing</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    </header>
+
+      <h1 class="contenedor">PORTAFOLIO</h1>
+
+<!-- VIDEO JOCKEY -->
+<section class="contenedor">
+      <div class="contenedor">
+      <h2>Video Jockey (VJ)</h2>
+      <img src="img/banner_vj.png" class="contenedorVideo" alt="Banner VJ">
+      <p class="statement">
+        Como VJ estoy a cargo de crear y mezclar imágenes en tiempo real para acompañar la música para eventos en vivo.
+        La función principal de un Video Jockey es crear un ambiente visual que complemente y mejore la experiencia del evento. 
+        En la música electrónica, una de las formas más populares de VJing es la proyección de visuales, que consiste en acompañar el sonido con mezclas de videoclips sobrepuestos.
+      </p>
+
+  <!-- CARRUSEL VJ -->
+  <div>
+    <div class="container">
+      <div class="col-12 col-sm-12 row justify-content-center">
+          <div class="col-12 col-sm-12 mt-5">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="3000">
+                          <img src="img/banner00.png" class="d-block w-100" alt="Banner visual de MOSAS">
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="3000">
+                          <img src="img/banner01.png" class="d-block w-100" alt="Banner visual de MOSAS">
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="3000">
+                          <img src="img/banner02.png" class="d-block w-100" alt="Banner visual de MOSAS">
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="3000">
+                          <img src="img/banner03.png" class="d-block w-100" alt="Banner visual de MOSAS">
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="3000">
+                          <img src="img/banner04.png" class="d-block w-100" alt="Banner visual de MOSAS">
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="3000">
+                          <img src="img/banner05.png" class="d-block w-100" alt="Banner visual de MOSAS">
+                      </div>
+                  </div>
+              </div>
+          </div>  
+      </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- ARTE -->
+<section class="contenedor">
+<div class="contenedor">
+  <h2>ARTE</h2>
+  <img src="img/banner_arte.png" class="contenedorVideo" alt="Banner ARTE">
+  <p class="statement">
+    Utilizando una versión web de Processing en JavaScript de código abierto se pueden crear obras interactivas. Por supuesto que estoy hablando de P5.js. <br>
+    Mi primera práctica fue “Composición con rojo, amarillo, azul y negro” de Piet Mondrian y en base a su trabajo pude hacerlo más interactivo.
+    Con el clic izquierdo del mouse se puede pintar sobre la obra. Esto es solo un poco de interactividad.<br>
+    En mi día a día sigo aprendiendo para ampliar mis conocimientos en la interactividad con el espectador.
+  </p>
+
+<!-- CARRUSEL ARTE -->
+<div>
+  <div class="container">
+    <div class="col-12 col-sm-12 row justify-content-center">
+        <div class="col-12 col-sm-12 mt-5">
+            <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="img/port_arte_1.png" class="d-block w-100" alt="Banner arte 1">
+                    </div>
+  
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/port_arte_2.png" class="d-block w-100" alt="Banner arte 2">
+                    </div>
+  
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/port_arte_3.png" class="d-block w-100" alt="Banner arte 3">
+                    </div>          
+                </div>
+            </div>
+        </div>  
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+
+<!-- EDITOR DE VIDEOS -->
+<section class="contenedor">
+<div class="contenedor">
+  <h2>EDITOR DE VIDEOS</h2>
+  <img src="img/banner_editor.png" class="contenedorVideo" alt="Banner Editor de Videos">
+  <p class="statement">
+    Como editor de videos, mi herramienta principal es el programa DaVinci Resolve, una plataforma poderosa que me permite dar forma a mis proyectos con precisión y creatividad.
+    Mi camino en la edición de videos comenzó con la autonomía, aprendiendo las complejidades de este programa a través de la práctica constante.
+    Trabajo en 16:9 (Horizontal) y 9:16 (Vertical) para redes sociales tales como YouTube, Instagram y TikTok.
+  </p>
+
+<!-- CARRUSEL EDITOR -->
+<div>
+<div class="container">
+  <div class="col-12 col-sm-12 row justify-content-center">
+      <div class="col-12 col-sm-12 mt-5">
+          <div id="carouselExampleInterval3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                      <img src="img/port_editor_1.png" class="d-block w-100" alt="Banner editor 1">
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="3000">
+                      <img src="img/port_editor_2.png" class="d-block w-100" alt="Banner editor 2">
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="3000">
+                      <img src="img/port_editor_3.png" class="d-block w-100" alt="Banner editor 3">
+                  </div>          
+              </div>
+          </div>
+      </div>  
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+    <!-- Link a archivos JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+<footer>
+  <p class="text-center">
+      Por cualquier comentario o sugerencia le pedimos que se dirija a la pestaña <a href="../contacto/contacto.html">Contacto</a>
+      <br>
+  </p>
+</footer>
+</body>
+</html>
