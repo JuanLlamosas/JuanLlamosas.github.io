@@ -61,10 +61,10 @@
     <ol>
       <li class="instrucciones">El formulario consta de 15 preguntas sobre Futurama.</li>
       <li class="instrucciones">Cada pregunta tiene 4 opciones de respuesta. Solo hay 1 opción correcta.</li>
+      <li class="instrucciones">El formulario aparecerá una vez apretado el botón "EMPEZAR".</li>
       <li class="instrucciones">Para responder a una pregunta, debes seleccionar una de las opciones haciendo clic en el círculo junto a ella.</li>
-      <li class="instrucciones">Puedes responder a las preguntas en el orden que prefieras.</li>
-      <li class="instrucciones">Una vez que hayas respondido a todas las preguntas, haz clic en el botón “Verificar respuestas” para comprobar tus respuestas.</li>
-      <li class="instrucciones">Después de hacer clic en “Verificar respuestas”, no podrás cambiar tus respuestas.</li>
+      <li class="instrucciones">Debajo del formulario hay un botón “Verificar respuestas” para comprobar tus respuestas.</li>
+      <li class="instrucciones">Después de hacer clic en “Verificar respuestas”, <strong>NO</strong> podrás cambiar tus respuestas.</li>
       <li class="instrucciones">Las respuestas correctas se resaltarán en verde. <br>Las respuestas incorrectas se resaltarán en rojo.</li>
     </ol>
     <p class="text-center">¡Suerte!</p>
@@ -72,256 +72,165 @@
 
   
   <video class="contenedorVideo" src="img/video_futurama.mp4" autoplay muted loop></video>
+  <hr><br>
+   <input type="button" class="boton" id="botonJuego" value="¡EMPEZAR!" onclick="mezclarPreguntas()">  <!--llamo a mezclarPreguntas cuando aprete el boton-->
+  <hr><br>
 
-  <hr>
   <article class="fondoJuego">
-<form class="cuestionario ">
-  <div id="pregunta1"> 
+    <form class="cuestionario" id="cuestionario">
+      <div id="pregunta1">
+        <h3><strong>¿Dónde trabajan los personajes principales de Futurama?</strong><br>
+          <img class="imagenes" src="img/futurama_trio.png" alt="Trio de Futurama"></h3>
+        <input type="radio" name="q1" value="1"> Interstellar Delivery<br>
+        <input type="radio" name="q1" value="2"> Planet Express<br>
+        <input type="radio" name="q1" value="3"> Space Shipments<br>
+        <input type="radio" name="q1" value="4"> Galaxy Couriers<br>
+        <hr>
+      </div>
+      
+      <div id="pregunta2">
+        <h3><strong>¿Cuál es el nombre completo de Bender?</strong><br>
+          <img class="imagenes" src="img/bender_rico.jpg" alt="Bender rico apunta con el dedo"></h3>
+        <input type="radio" name="q2" value="1"> Bender Flexo Rodríguez<br>
+        <input type="radio" name="q2" value="2"> Bender Bot Rodríguez<br>
+        <input type="radio" name="q2" value="3"> Bender el tremendo<br>
+        <input type="radio" name="q2" value="4"> Bender Bending Rodríguez<br>
+        <hr>
+      </div>
 
-  	<!-- RTA: 2 --> 
-    <h3><strong>¿Dónde trabajan los personajes principales de Futurama?</strong><br>
-    <img class="imagenes" src="img/futurama_trio.png" alt="Trio de Futurama"></h3>
-    <input type="radio" name="q1" value="1"> Interstellar Delivery<br>
-    <input type="radio" name="q1" value="2"> Planet Express<br>
-    <input type="radio" name="q1" value="3"> Space Shipments<br>
-    <input type="radio" name="q1" value="4"> Galaxy Couriers<br>
-  </div>
-</form>
-<hr>
+      <div id="pregunta3"> 
+        <h3><strong>¿Cómo se llama el perro de Fry?</strong><br>
+          <img class="imagenes" src="img/perro_fry.jpg" alt="Perro de Fry"></h3>
+        <input type="radio" name="q3" value="1"> Sparky<br>
+        <input type="radio" name="q3" value="2"> Max<br>
+        <input type="radio" name="q3" value="3"> Seymour<br>
+        <input type="radio" name="q3" value="4"> Mordelón<br>
+        <hr>
+      </div>
 
-<form class="cuestionario">
-  <div id="pregunta2"> 
+      <div id="pregunta4"> 
+      <h3><strong>¿Cómo se llama el planeta natal de Leela?</strong><br>
+      <img class="imagenes" src="img/leela.jpg" alt="Leela de Futurama"></h3>
+        <input type="radio" name="q4" value="1"> Vergon 6<br>
+        <input type="radio" name="q4" value="2"> Marte<br>
+        <input type="radio" name="q4" value="3"> Tierra<br>
+        <input type="radio" name="q4" value="4"> Amazonia<br>
+        <hr>
+      </div>
 
-  	<!-- RTA: 4 -->
-    <h3><strong>¿Cuál es el nombre completo de Bender?</strong><br>
-    <img class="imagenes" src="img/bender_rico.jpg" alt="Bender rico apunta con el dedo"></h3>
-    <input type="radio" name="q1" value="1"> Bender Flexo Rodríguez<br>
-    <input type="radio" name="q1" value="2"> Bender Bot Rodríguez<br>
-    <input type="radio" name="q1" value="3"> Bender el tremendo<br>
-    <input type="radio" name="q1" value="4"> Bender Bending Rodríguez<br>
-  </div>
-</form>
-<hr>
-
-<form class="cuestionario">
-  <div id="pregunta3"> 
-
-  	<!-- RTA: 3 -->
-    <h3><strong>¿Cómo se llama el perro de Fry?</strong><br>
-    <img class="imagenes" src="img/perro_fry.jpg" alt="Perro de Fry"></h3>
-    <input type="radio" name="q1" value="1"> Sparky<br>
-    <input type="radio" name="q1" value="2"> Max<br>
-    <input type="radio" name="q1" value="3"> Seymour<br>
-    <input type="radio" name="q1" value="4"> Mordelón<br>
-  </div>
-</form>
-<hr>
-
-<form class="cuestionario">
-  <div id="pregunta4"> 
-
-  	<!-- RTA: 3 -->
-    <h3><strong>¿Cómo se llama el planeta natal de Leela?</strong><br>
-    <img class="imagenes" src="img/leela.jpg" alt="Leela de Futurama"></h3>
-    <input type="radio" name="q1" value="1"> Vergon 6<br>
-    <input type="radio" name="q1" value="2"> Marte<br>
-    <input type="radio" name="q1" value="3"> Tierra<br>
-    <input type="radio" name="q1" value="4"> Amazonia<br>
-  </div>
-</form>
-<hr>
-
-<form class="cuestionario">
   <div id="pregunta5"> 
-
-  	<!-- RTA: 1 -->
     <h3><strong>¿Qué usa Bender como fuente principal de energía?</strong><br>
     <img class="imagenes" src="img/bender_enojo.jpg" alt="Bender enojado"></h3>
-    <input type="radio" name="q1" value="1"> Alcohol<br>
-    <input type="radio" name="q1" value="2"> Aceite para robots<br>
-    <input type="radio" name="q1" value="3"> Energía solar<br>
-    <input type="radio" name="q1" value="4"> Electricidad<br>
+    <input type="radio" name="q5" value="1"> Alcohol<br>
+    <input type="radio" name="q5" value="2"> Aceite para robots<br>
+    <input type="radio" name="q5" value="3"> Energía solar<br>
+    <input type="radio" name="q5" value="4"> Electricidad<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta6"> 
-
-  	<!-- RTA: 4 -->
     <h3><strong>¿Cómo se llama el esposo de Amy Wong?</strong><br>
     <img class="imagenes" src="img/amy.jpg" alt="Amy intercambiando cuerpos"></h3>
-    <input type="radio" name="q1" value="1"> Zapp Brannigan<br>
-    <input type="radio" name="q1" value="2"> Bender<br>
-    <input type="radio" name="q1" value="3"> Fry<br>
-    <input type="radio" name="q1" value="4"> Kif Kroker<br>
+    <input type="radio" name="q6" value="1"> Zapp Brannigan<br>
+    <input type="radio" name="q6" value="2"> Bender<br>
+    <input type="radio" name="q6" value="3"> Fry<br>
+    <input type="radio" name="q6" value="4"> Kif Kroker<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta7"> 
-
-  	<!-- RTA: 2 -->
     <h3><strong>¿Cuál es la frase de presentación de este personaje?</strong><br>
     <img class="imagenes" src="img/lrrr.jpg" alt="Lrrr conquistando"></h3>
-    <input type="radio" name="q1" value="1"> "¡Silencio, terrícolas!"<br>
-    <input type="radio" name="q1" value="2"> "¡Yo soy Lrrr, gobernante de Omicron Persei 8!"<br>
-    <input type="radio" name="q1" value="3"> "¡Prepárense para la aniquilación!"<br>
-    <input type="radio" name="q1" value="4"> "¡Inclínense ante Lrrr!"<br>
+    <input type="radio" name="q7" value="1"> "¡Silencio, terrícolas!"<br>
+    <input type="radio" name="q7" value="2"> "¡Yo soy Lrrr, gobernante de Omicron Persei 8!"<br>
+    <input type="radio" name="q7" value="3"> "¡Prepárense para la aniquilación!"<br>
+    <input type="radio" name="q7" value="4"> "¡Inclínense ante Lrrr!"<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta8"> 
-
-  	<!-- RTA: 3 -->
     <h3><strong>¿Qué instrumento musical toca Fry?</strong><br>
     <img class="imagenes" src="img/intercambio.jpg" alt="Fry intercambiando manos con el Diablo robot"></h3>
-    <input type="radio" name="q1" value="1"> Flauta<br>
-    <input type="radio" name="q1" value="2"> Violín<br>
-    <input type="radio" name="q1" value="3"> Holofonor<br>
-    <input type="radio" name="q1" value="4"> Guitarra<br>
+    <input type="radio" name="q8" value="1"> Flauta<br>
+    <input type="radio" name="q8" value="2"> Violín<br>
+    <input type="radio" name="q8" value="3"> Holofonor<br>
+    <input type="radio" name="q8" value="4"> Guitarra<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta9"> 
-
-  	<!-- RTA: 1 -->
     <h3><strong>¿Qué es "Slurm" en el universo de Futurama?</strong><br>
     <img class="imagenes" src="img/slurm.jpg" alt="Slurm"></h3>
-    <input type="radio" name="q1" value="1"> Una bebida gaseosa<br>
-    <input type="radio" name="q1" value="2"> Un planeta<br>
-    <input type="radio" name="q1" value="3"> Una especie alienígena<br>
-    <input type="radio" name="q1" value="4"> Una droga<br>
+    <input type="radio" name="q9" value="1"> Una bebida gaseosa<br>
+    <input type="radio" name="q9" value="2"> Un planeta<br>
+    <input type="radio" name="q9" value="3"> Una especie alienígena<br>
+    <input type="radio" name="q9" value="4"> Una droga<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta10"> 
-
-  	<!-- RTA: 2 -->
     <h3><strong>¿Quién es Cubert Farnsworth?</strong><br>
     <img class="imagenes" src="img/cubert.jpg" alt="Cubert Farnsworth"></h3>
-    <input type="radio" name="q1" value="1"> El sobrino de Fry<br>
-    <input type="radio" name="q1" value="2"> Un clon del Profesor Farnsworth<br>
-    <input type="radio" name="q1" value="3"> El hijo de Hubert Farnsworth<br>
-    <input type="radio" name="q1" value="4"> Hermano de Fry<br>
+    <input type="radio" name="q10" value="1"> El sobrino de Fry<br>
+    <input type="radio" name="q10" value="2"> Un clon del Profesor Farnsworth<br>
+    <input type="radio" name="q10" value="3"> El hijo de Hubert Farnsworth<br>
+    <input type="radio" name="q10" value="4"> Hermano de Fry<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta11"> 
-
-  	<!-- RTA: 1 -->
     <h3><strong>¿Cuál es el nombre del robot actor más famoso de la serie?</strong><br>
     <img class="imagenes" src="img/silueta_actor.jpg" alt="Silueta drl robot actor de Futurama"></h3>
-    <input type="radio" name="q1" value="1"> Calculón<br>
-    <input type="radio" name="q1" value="2"> Flexo<br>
-    <input type="radio" name="q1" value="3"> Bender<br>
-    <input type="radio" name="q1" value="4"> Roberto<br>
+    <input type="radio" name="q11" value="1"> Calculón<br>
+    <input type="radio" name="q11" value="2"> Flexo<br>
+    <input type="radio" name="q11" value="3"> Bender<br>
+    <input type="radio" name="q11" value="4"> Roberto<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta12"> 
-
-  	<!-- RTA: 3 -->
     <h3><strong>¿Cómo se llaman los hijos de Mamá?</strong><br>
     <img class="imagenes" src="img/hijos_mama.jpg" alt="Hijos de Mamá"></h3>
-    <input type="radio" name="q1" value="1"> Larry, Zapp y Igner<br>
-    <input type="radio" name="q1" value="2"> Walt, Larry y Hermes<br>
-    <input type="radio" name="q1" value="3"> Walt, Larry y Igner<br>
-    <input type="radio" name="q1" value="4"> Walt, John y Igner<br>
+    <input type="radio" name="q12" value="1"> Larry, Zapp y Igner<br>
+    <input type="radio" name="q12" value="2"> Walt, Larry y Hermes<br>
+    <input type="radio" name="q12" value="3"> Walt, Larry y Igner<br>
+    <input type="radio" name="q12" value="4"> Walt, John y Igner<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta13"> 
-
-  	<!-- RTA: 4 -->
     <h3><strong>¿Qué hace Fry con su reembolso de impuestos de $300?</strong><br>
     <img class="imagenes" src="img/futumeme.png" alt="Frame de 'callate y toma mi dinero'"></h3>
-    <input type="radio" name="q1" value="1"> Compra una lata de anchoas<br>
-    <input type="radio" name="q1" value="2"> Compra una colección de cómics antiguos<br>
-    <input type="radio" name="q1" value="3"> Compra un robot de compañía<br>
-    <input type="radio" name="q1" value="4"> Compra 100 tazas de café<br>
+    <input type="radio" name="q13" value="1"> Compra una lata de anchoas<br>
+    <input type="radio" name="q13" value="2"> Compra una colección de cómics antiguos<br>
+    <input type="radio" name="q13" value="3"> Compra un robot de compañía<br>
+    <input type="radio" name="q13" value="4"> Compra 100 tazas de café<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta14"> 
-
-  	<!-- RTA: 4 -->
     <h3><strong>¿Cómo se llama este grupo?</strong><br>
     <img class="imagenes" src="img/futurama_equipo.jpg" alt="Equipo de Basquet de Futurama"></h3>
-    <input type="radio" name="q1" value="1"> Los Spaceballers<br>
-    <input type="radio" name="q1" value="2"> Los Mutantes<br>
-    <input type="radio" name="q1" value="3"> Los Intergalácticos<br>
-    <input type="radio" name="q1" value="4"> Los Globetrotters<br>
+    <input type="radio" name="q14" value="1"> Los Spaceballers<br>
+    <input type="radio" name="q14" value="2"> Los Mutantes<br>
+    <input type="radio" name="q14" value="3"> Los Intergalácticos<br>
+    <input type="radio" name="q14" value="4"> Los Globetrotters<br>
+    <hr>
   </div>
-</form>
-<hr>
 
-<form class="cuestionario">
   <div id="pregunta15"> 
-
-  	<!-- RTA: 1 -->
     <h3><strong>¿Cómo se llama el último capítulo de la temporada 7?</strong><br>
     <img class="imagenes" src="img/futurama_ultimocap.jpg" alt="Último cápitulo temporada 7"></h3>
-    <input type="radio" name="q1" value="1"> Mientras tanto<br>
-    <input type="radio" name="q1" value="2"> Hasta abajo<br>
-    <input type="radio" name="q1" value="3"> Las manos del diablo son juguetes ociosos<br>
-    <input type="radio" name="q1" value="4"> Sobreaceleramiento<br>
+    <input type="radio" name="q15" value="1"> Mientras tanto<br>
+    <input type="radio" name="q15" value="2"> Hasta abajo<br>
+    <input type="radio" name="q15" value="3"> Las manos del diablo son juguetes ociosos<br>
+    <input type="radio" name="q15" value="4"> Sobreaceleramiento<br>
+    <hr>
   </div>
-</form>
-<hr>
+  </form>
 
-<input type="button" class="boton" value="Verificar respuestas" onclick="verificarRespuestas()">
-
+<input type="button" class="boton" value="Verificar respuestas" id="botonFinJuego" onclick="verificarRespuestas()"> <!--llamo a verificarRespuestas cuando aprete el boton-->
 </article>
-
-<script>
-//respuestas correctas en orden del 1-10
-var respuestasCorrectas = [2,4,3,3,1,4,2,3,1,2,1,3,4,4,1];
-
-function verificarRespuestas() {
-  var puntuacion = 0;
-  
-
-  for (var i = 0; i < respuestasCorrectas.length; i++) { //for que recorre todas las respuestas correctas  
-    var pregunta = document.getElementById('pregunta' + (i+1)); //Se obtiene el elemento HTML que representa la pregunta actual. Lo hace concatenando el valor de (i+1) al string 'pregunta', para que quede como 'pregunta1' ya que las preguntas están etiquetadas como 'pregunta1'
-
-    var radios = pregunta.getElementsByTagName('input'); //Se obtienen los elementos input para obtener TODAS las opciones (los circulos de las respuestas)
-    var respondido = false; //respondido? NO
-    
-    for (var j = 0; j < radios.length; j++) { //for que recorre todas las opciones de respuesta para la pregunta actual
-      radios[j].disabled = true; //Desactiva los botones después de verificar las respuestas 
-
-//RTA CORRECTA      
-      if (radios[j].value == respuestasCorrectas[i] && radios[j].checked) { //Verificamos si la respuesta es la correcta Y si está marcada en la opción correcta
-        radios[j].parentNode.style.backgroundColor = 'lightgreen'; //CORRECTO! fondo verde
-        puntuacion++; //+1 puntos
-        respondido = true; //marca que esté respondido
-
-//RTA INCORRECTA
-      } else if (radios[j].checked || !respondido) { //Si la opción no es la correcta O si no está respondida
-        radios[j].parentNode.style.backgroundColor = 'lightcoral'; //INCORRECTO! fondo rojo
-      }
-    }
-  }
-
-//Cuantas preguntas respondió correctamente  
-  alert("Has respondido correctamente a " + puntuacion + " preguntas."); //Alerta de la puntuación final 
-} </script>
 
 </div>
 <footer>
@@ -333,6 +242,7 @@ function verificarRespuestas() {
 
 <!-- Link a archivos JS de Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="juego.js"></script>
 
 </body>
 </html> 

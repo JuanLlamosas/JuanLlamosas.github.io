@@ -208,3 +208,11 @@ article{
     padding-right: 2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#cuestionario{
+    display: none;
+}
+
+#botonFinJuego{
+    display: none;
+}
